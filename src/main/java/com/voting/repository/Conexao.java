@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Conexao {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/voting-system";
+            "jdbc:mysql://localhost:3306/sistema_votacao";
 
     private static final String USUARIO = "root";
 

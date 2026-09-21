@@ -1,9 +1,22 @@
 package com.voting.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "eleitores")
 public class Eleitor {
-    private long id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, length = 100)
     private String nome;
+
+    @Column(nullable = false, unique = true, length = 11)
     private String cpf;
+
+    @Column(nullable = false)
     private boolean votou;
 
     public Eleitor() {
@@ -13,13 +26,6 @@ public class Eleitor {
         this.nome = nome;
         this.cpf = cpf;
         this.votou = false;
-    }
-
-    public Eleitor(Long id, String nome, String cpf, boolean votou){
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.votou = votou;
     }
 
     public Long getId() {

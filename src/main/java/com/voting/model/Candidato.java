@@ -1,11 +1,22 @@
 package com.voting.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "candidatos")
 public class Candidato {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, length = 100)
     private String nome;
+
+    @Column(nullable = false, unique = true)
     private int numero;
 
-    public Candidato(){
+    public Candidato() {
     }
 
     public Candidato(String nome, int numero) {
@@ -19,7 +30,7 @@ public class Candidato {
         this.numero = numero;
     }
 
-    public Long getid() {
+    public Long getId() {
         return id;
     }
 
@@ -27,7 +38,7 @@ public class Candidato {
         this.id = id;
     }
 
-    public String nome() {
+    public String getNome() {
         return nome;
     }
 
@@ -42,5 +53,4 @@ public class Candidato {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-
 }
