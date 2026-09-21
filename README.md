@@ -1,5 +1,3 @@
-This project aims to create a voting system using Java, Spring Boot, and MySQL. It allows users to register voters and candidates and manage voting information through a simple and organized system.
-
 ## How to Run
 
 1. Clone this repository.
