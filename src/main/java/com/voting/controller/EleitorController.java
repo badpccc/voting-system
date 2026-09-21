@@ -16,13 +16,11 @@ public class EleitorController {
         this.eleitorRepository = eleitorRepository;
     }
 
-    // Listar todos os eleitores
     @GetMapping
     public List<Eleitor> listarEleitores() {
         return eleitorRepository.findAll();
     }
 
-    // Cadastrar um novo eleitor
     @PostMapping
     public Eleitor cadastrarEleitor(@RequestBody Eleitor eleitor) {
         return eleitorRepository.save(eleitor);
