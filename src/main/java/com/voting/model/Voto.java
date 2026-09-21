@@ -1,4 +1,4 @@
-package model;
+package com.voting.model;
 
 public class Voto {
     private Long id;
